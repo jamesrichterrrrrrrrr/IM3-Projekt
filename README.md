@@ -18,7 +18,7 @@ James Richter 24C2 (james.richter@stud.fhgr.ch)
 
 - Umgang mit Datenbanken und phpMyAdmin anfangs anspruchsvoll. Besonders Tabellenstrukturen, Relationen und Datentypen waren verwirrend. Durch wiederholtes Testen von SQL-Queries und gezieltes Überprüfen einzelner Datensätze wurden Zusammenhänge klar.
 
-- Weiters Learning: Umgang mit unvollständigen oder noch wachsenden Datensätzen. Das Taylor-Swift-Diagramm konnte zum Zeitpunkt der Abgabe noch nicht mit aussagekräftigen Echtzeitdaten arbeiten (wegen der Nicht-Rückverfolgbarkeit der SRF Daten), was zeigt, wie abhängig visuelle Auswertungen von genügend grosser Datenmengen sind und dass man in solche Fälle Übergangslösungen (Dummy-Data) einplanen muss.
+- Weiteres Learning: Umgang mit unvollständigen oder noch wachsenden Datensätzen. Das Taylor-Swift-Diagramm konnte zum Zeitpunkt der Abgabe noch nicht mit aussagekräftigen Echtzeitdaten arbeiten (wegen der Nicht-Rückverfolgbarkeit der SRF Daten), was zeigt, wie abhängig visuelle Auswertungen von genügend grosser Datenmengen sind und dass man in solche Fälle Übergangslösungen (Dummy-Data) einplanen muss.
 
 - Zudem habe ich wieder einmal unterschätzt, wie viel Aufwand das Coden eines "überstylten" Figmas mit sich bringt. Elemente, die im Design schnell gemacht sind, brauchen im Code viel Feinarbeit und iterative Anpassungen über verschiedene Screen-Grössen hinweg.
 
