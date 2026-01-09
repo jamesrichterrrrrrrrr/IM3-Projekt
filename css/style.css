@@ -2,641 +2,739 @@
    Base / Reset
    ========================= */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	color: #fff;
-	font-family: "Syne", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Syne", sans-serif;
 }
 
-html, body {
-	height: 100%;
-	background: #151515;
+html,
+body {
+  height: 100%;
+  background: #151515;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
-	display: block;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 ul li,
 li {
-	list-style: none !important;
+  list-style: none !important;
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
-	text-decoration: none !important;
+  text-decoration: none !important;
 }
-
 
 /* =========================
    Hero
    ========================= */
 .hero {
-	background: url(../images/hero-bg.png) bottom center no-repeat;
-	background-size: cover;
-	height: 80vh;
-	padding-top: 5vh;
-	position: relative;
+  background: url(../images/hero-bg.png) bottom center no-repeat;
+  background-size: cover;
+  height: 80vh;
+  padding-top: 5vh;
+  position: relative;
 }
 
 .hero-main {
-	width: 90%;
-	margin: 0 auto;
-	background: #151515;
-	border-top-left-radius: 96px;
-	border-top-right-radius: 96px;
-	height: 75vh;
+  width: 90%;
+  margin: 0 auto;
+  background: #151515;
+  border-top-left-radius: 96px;
+  border-top-right-radius: 96px;
+  height: 75vh;
 }
 
 .logo {
-	position: absolute;
-	left: -5px;
-	top: 15%;
+  position: absolute;
+  left: -5px;
+  top: 15%;
 }
 
 .logo img {
-	width: 65%;
+  width: 65%;
 }
 
 .hero-content {
-	position: absolute;
-	top: 70%;
-	left: 50%;
-	transform: translate(-50%, 0);
-	text-align: center;
-	animation: shake 0.5s ease-in-out 3s infinite;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  animation: shake 0.5s ease-in-out 3s infinite;
 }
 
 .hero-content h5 {
-	margin-bottom: 30px;
-	font-weight: 600;
+  margin-bottom: 30px;
+  font-weight: 600;
 }
 
 .hero-content p {
-	font-size: 20px;
-	line-height: 10px;
+  font-size: 20px;
+  line-height: 10px;
 }
 
 .weave {
-	display: inline-block;
-	transform-origin: center bottom;
-	animation: rotateFloat 10s ease-in-out infinite;
+  display: inline-block;
+  transform-origin: center bottom;
+  animation: rotateFloat 10s ease-in-out infinite;
 }
 
-/* Smooth wave with longer pause */
 @keyframes rotateFloat {
-	0%,
-	100% { transform: rotate(0deg) translateY(0); }
-	20% { transform: rotate(4deg) translateY(-4px); }
-	40% { transform: rotate(-4deg) translateY(4px); }
-	60% { transform: rotate(3deg) translateY(-3px); }
-	80%,
-	100% { transform: rotate(0deg) translateY(0); }
+  0%,
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  20% {
+    transform: rotate(4deg) translateY(-4px);
+  }
+  40% {
+    transform: rotate(-4deg) translateY(4px);
+  }
+  60% {
+    transform: rotate(3deg) translateY(-3px);
+  }
+  80%,
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
 }
-
 
 /* =========================
    Sections / Layout
    ========================= */
 .main {
-	width: 90%;
-	margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .quaked {
-	margin-top: -2px;
-	background: #151515;
-	padding: 50px 0;
-	overflow: visible; /* prevent clipping */
+  margin-top: -2px;
+  background: #151515;
+  padding: 50px 0;
+  overflow: visible;
 }
 
 .quaked-main {
-	width: 95%;
-	margin-left: auto;
-	overflow: visible; /* prevent clipping */
+  width: 95%;
+  margin-left: auto;
+  overflow: visible;
 }
-
 
 /* =========================
    Section title / Tooltip
    ========================= */
 .sec-title {
-	display: flex;
-	align-items: center;
-	margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
 }
 
 .sec-title img {
-	margin-left: 15px;
-	margin-right: 20px;
-	display: inline-block;
-	width: 24px;
-	height: 40px;
+  margin-left: 15px;
+  margin-right: 20px;
+  display: inline-block;
+  width: 24px;
+  height: 40px;
 }
 
 .sec-title p {
-	opacity: 0;
-	background: #2B2B2B;
-	padding: 7px 15px;
-	border-radius: 6px;
-	transition: opacity 0.3s;
-	position: relative;
+  opacity: 0;
+  background: #2b2b2b;
+  padding: 7px 15px;
+  border-radius: 6px;
+  transition: opacity 0.3s;
+  position: relative;
 }
 
 .sec-title img:hover ~ p {
-	opacity: 1;
+  opacity: 1;
 }
 
 .sec-title p::before {
-	content: "\f0d9";
-	font-family: "Font Awesome 5 Free";
-	font-weight: 900;
-	position: absolute;
-	left: -10px;
-	top: -10px;
-	font-size: 40px;
-	color: #2B2B2B;
+  content: "\f0d9";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  font-size: 40px;
+  color: #2b2b2b;
 }
-
 
 /* =========================
    Carousel item wrapper
    ========================= */
-.quaked-item,
-.quaked-iteam {
-	padding: 0 25px;
-	text-align: center;
+.quaked-item {
+  padding: 0 25px;
+  text-align: center;
 }
 
-.quaked-item p,
-.quaked-iteam p {
-	font-size: 26px;
-	margin-bottom: 20px;
+.quaked-item p {
+  font-size: 26px;
+  margin-bottom: 20px;
 }
-
 
 /* =========================================================
-   NATIVE SMOOTH CAROUSEL (trackpad scroll, no snap)
-   + FULL-BLEED to the LEFT EDGE (no cutoff)
+   Native smooth carousel (trackpad scroll, no snap)
+   + full-bleed to viewport edges
    ========================================================= */
 .quake-carousel {
-	/* scrolling */
-	overflow-x: auto;
-	overflow-y: hidden;
-	-webkit-overflow-scrolling: touch;
-	overscroll-behavior-x: contain;
-	scrollbar-width: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
 
-	/* full-bleed: reach viewport edges even inside .quaked-main */
-	width: 100vw;
-	margin-left: calc(50% - 50vw);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 
-	/* optional: if you want it flush-left with no inset */
-	padding-left: 0;
-	padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
+
 .quake-carousel::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 .quake-track {
-	display: flex;
-	align-items: flex-start;
-
-	/* fixed spacing between cards */
-	gap: 16px;
-
-	/* IMPORTANT: no negative padding (invalid) */
-	padding: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0;
 }
 
-/* ensure children don’t shrink */
 .quake-track > .item {
-	flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 @media (max-width: 767px) {
-	.quake-track {
-		gap: 8px;
-	}
+  .quake-track {
+    gap: 8px;
+  }
 }
 
-
 /* =========================================================
-   PLAYLIST BOXES (NEW SYSTEM — Desktop)
-   - Bounding box: 360x240
-   - Inner square: 240x240
+   Quake cards
    ========================================================= */
 .quake-link {
-	display: inline-block;
+  display: inline-block;
 }
 
 .quake-card {
-	width: 360px;
-	height: 240px;
-	margin: 0 auto;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
+  width: 360px;
+  height: 240px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .quake-box {
-	width: 240px;
-	height: 240px;
-	position: relative;
-	overflow: visible;
+  width: 240px;
+  height: 240px;
+  position: relative;
+  overflow: visible;
+  border-radius: 40px;
+  box-shadow: 0px 0px 50px 0px #d659b180;
+}
 
-	background: radial-gradient(50% 50% at 50% 50%, #EDA05C 0%, #D659B1 100%);
-	border-radius: 40px;
-	box-shadow: 0px 0px 50px 0px #D659B180;
+/* gradients by magnitude */
+.quake-box.mag-lt-52 {
+  background: radial-gradient(circle, #8ee77b 0%, #365ca3 100%);
+  box-shadow: 0 0 50px rgba(54, 92, 163, 0.5);
+}
+
+.quake-box.mag-52-55 {
+  background: radial-gradient(circle, #eda05c 0%, #d659b1 100%);
+  box-shadow: 0 0 50px rgba(214, 89, 177, 0.5);
+}
+
+.quake-box.mag-56-59 {
+  background: radial-gradient(circle, #f37b7d 0%, #d3b163 100%);
+  box-shadow: 0 0 50px rgba(211, 177, 99, 0.5);
+}
+
+.quake-box.mag-60-69 {
+  background: radial-gradient(circle, #000000 0%, #c2c2c2 100%);
+  box-shadow: 0 0 50px rgba(194, 194, 194, 0.5);
+}
+
+.quake-box.mag-70-plus {
+  background: radial-gradient(circle, #000000 0%, #5a5a5a 100%);
+  box-shadow: 0 0 50px rgba(90, 90, 90, 0.5);
 }
 
 .quake-date {
-	position: absolute;
-	top: 30px;
-	left: 50%;
-	transform: translateX(-50%);
-	margin: 0;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
 
-	font-size: 32px;
-	font-weight: 700;
-	line-height: 38px;
-	text-align: center;
-	width: 240px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  text-align: center;
+  width: 240px;
 }
 
 .quake-mag {
-	position: absolute;
-	top: 32px;
-	left: 50%;
-	transform: translateX(-50%);
-	margin: 0;
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
 
-	font-size: 120px;
-	font-weight: 800;
-	line-height: 161px;
-	text-align: center;
-	width: 360px;
+  font-size: 120px;
+  font-weight: 800;
+  line-height: 161px;
+  text-align: center;
+  width: 360px;
 
-	pointer-events: none;
+  pointer-events: none;
 }
 
 .quake-loc {
-	position: absolute;
-	bottom: 16px;
-	left: 50%;
-	transform: translateX(-50%);
-	margin: 0;
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
 
-	font-size: 40px;
-	line-height: 58px;
-	text-align: center;
+  font-size: 40px;
+  line-height: 58px;
+  text-align: center;
 
-	max-width: 200px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: clip;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  display: block;
 }
 
-/* Location weight helpers */
-.loc-w800 { font-weight: 800; }
-.loc-w700 { font-weight: 700; }
-.loc-w600 { font-weight: 600; }
-.loc-w500 { font-weight: 500; }
-.loc-w400 { font-weight: 400; }
-
+.loc-w800 {
+  font-weight: 800;
+}
+.loc-w700 {
+  font-weight: 700;
+}
+.loc-w600 {
+  font-weight: 600;
+}
+.loc-w500 {
+  font-weight: 500;
+}
+.loc-w400 {
+  font-weight: 400;
+}
 
 /* =========================
    Graph section
    ========================= */
 .graph {
-	padding: 50px 0;
-	background: #151515;
+  padding: 50px 0;
+  background: #151515;
 }
 
 .graph .sec-title {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .graph-title p {
-	font-size: 20px;
+  font-size: 20px;
 }
 
 .graph-title h3 {
-	font-size: 24px;
-	color: #D659B1;
-	font-weight: 900;
-	margin-bottom: 40px;
+  font-size: 24px;
+  color: #d659b1;
+  font-weight: 900;
+  margin-bottom: 40px;
 }
-
-.graph-title img {
-	margin: 30px 0;
-	width: 100%;
-}
-
 
 /* =========================
    Filters / List section
    ========================= */
 .filter-section {
-	padding: 50px 0;
-	background: url(../images/filter.png) top center no-repeat;
-	background-size: cover;
+  padding: 50px 0;
+  background: url(../images/filter.png) top center no-repeat;
+  background-size: cover;
 }
 
 .filter-box {
-	padding: 50px 50px 100px;
-	border-bottom-left-radius: 100px;
-	border-bottom-right-radius: 100px;
-	background: #151515;
+  padding: 50px 50px 100px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  background: #151515;
 }
 
 .filters {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 20px;
-	margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
 select {
-	background: #2a2a2a;
-	color: #fff;
-	border: none;
-	padding: 10px 24px;
-	border-radius: 8px;
-	font-size: 18px;
-	cursor: pointer;
+  background: #2a2a2a;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-.highlight {
-	background: #d659b1;
-	color: #fff;
+/* Filter select states */
+.filters select.is-active {
+  background: #d659b1;
+  color: #fff;
 }
-
-.sort-by {
-	margin-left: auto;
-}
-
 
 /* =========================
-   Playlist list
+   Playlist list (archive)
    ========================= */
 .playlist-section h4 {
-	font-size: 16px;
-	font-weight: 600;
-	color: #fff;
-	margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 .playlist-list {
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .playlist-item {
-	display: grid;
-	grid-template-columns: 80px 1fr 1fr 100px 100px;
-	align-items: center;
-	background: #1b1b1b;
-	border-radius: 12px;
-	padding: 14px 20px;
-	transition: all 0.25s ease;
-	cursor: pointer;
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr 100px 100px;
+  align-items: center;
+  background: #1b1b1b;
+  border-radius: 12px;
+  padding: 14px 20px;
+  transition: all 0.25s ease;
+  cursor: pointer;
 }
 
 .magnitude {
-	width: 45px;
-	height: 45px;
-	border-radius: 10px;
-	color: #fff;
-	font-weight: 600;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 17px;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
 }
 
 .magnitude.red {
-	background: linear-gradient(145deg, #ff6767, #b63232);
+  background: linear-gradient(145deg, #ff6767, #b63232);
 }
 
 .magnitude.pink {
-	background: linear-gradient(145deg, #ff82dd, #a73386);
+  background: linear-gradient(145deg, #ff82dd, #a73386);
 }
 
 .magnitude.green {
-	background: linear-gradient(145deg, #5fffb0, #2e7a60);
+  background: linear-gradient(145deg, #5fffb0, #2e7a60);
 }
 
 .location {
-	color: #ccc;
-	font-size: 15px;
+  color: #ccc;
+  font-size: 15px;
 }
 
 .location span,
 .location strong {
-	color: #fff;
-	font-weight: 500;
+  color: #fff;
+  font-weight: 500;
 }
 
 .date,
 .depth,
 .songs {
-	color: #aaa;
-	font-size: 18px;
+  color: #aaa;
+  font-size: 18px;
 }
 
 .songs {
-	font-weight: 600;
-	text-align: right;
-	color: #fff;
+  font-weight: 600;
+  text-align: right;
+  color: #fff;
 }
 
 /* =========================
-   PLAYLIST PAGE (RESTORED)
-   Scoped to .playlist-page
+   Load more button
    ========================= */
-.playlist-page .main-container{
-	padding: 40px 0 100px;
-	background: url(../images/playlist.png) top center no-repeat;
-	background-size: cover;
-	position: relative;
+.load-more-btn {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+
+  font-family: inherit;
+  color: #fff;
+
+  background: #2a2a2a;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  display: inline-block;
 }
 
-.playlist-page .fixed-arrrow{
-	position: fixed;
-	left: 3%;
-	top: 30px;
-	z-index: 99;
+.load-more-btn:hover {
+  filter: brightness(1.1);
 }
 
-.playlist-page .headphone{
-	position: absolute;
-	top: 0;
-	left: 15%;
+.load-more-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
-.playlist-page .center-title{
-	margin-top: 100px;
-	text-align: center;
+.load-more-btn:focus {
+  box-shadow: 0 0 0 3px rgba(214, 89, 177, 0.35);
 }
 
-.playlist-page .center-title p{
-	font-size: 20px;
+/* =========================
+   Playlist page (scoped)
+   ========================= */
+.playlist-page .main-container {
+  padding: 40px 0 100px;
+  background: url(../images/playlist.png) top center no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
-.playlist-page .center-title h1{
-	font-size: 64px;
-	line-height: 100%;
-	font-weight: 900;
+.playlist-page .fixed-arrrow {
+  position: fixed;
+  left: 3%;
+  top: 30px;
+  z-index: 99;
 }
 
-.playlist-page .playlist-container{
-	margin-top: 70px;
-	position: relative;
-	background:#151515;
-	border-radius: 50px;
-	padding: 50px 0 130px;
+.playlist-page .headphone {
+  position: absolute;
+  top: 0;
+  left: 15%;
 }
 
-.playlist-page .playlist-container::before{
-	content: "";
-	position: absolute;
-	top:12%;
-	left: 35%;
-	width: 2px;
-	height: 75%;
-	background: #fff;
+.playlist-page .center-title {
+  margin-top: 100px;
+  text-align: center;
 }
 
-.playlist-page .spotify-btn{
-	position: absolute;
-	left: 35%;
-	bottom: 35px;
+.playlist-page .center-title p {
+  font-size: 20px;
 }
 
-.playlist-page .main-playlist{
-	width: 80%;
-	margin: 0 auto;
-	display: flex;
-	margin-bottom: 50px;
-	align-items: center;
-	justify-content: space-between;
+.playlist-page .center-title h1 {
+  font-size: 64px;
+  line-height: 100%;
+  font-weight: 900;
 }
 
-.playlist-page .dis-flex{
-	display: flex;
+.playlist-page .playlist-container {
+  margin-top: 70px;
+  position: relative;
+  background: #151515;
+  border-radius: 50px;
+  padding: 50px 0 130px;
 }
 
-.playlist-page .main-playlist p{
-	font-size: 20px;
-	font-weight: 600;
+.playlist-page .playlist-container::before {
+  content: "";
+  position: absolute;
+  top: 12%;
+  left: 35%;
+  width: 2px;
+  height: 75%;
+  background: #fff;
 }
 
-.playlist-page .playlist-right{
-	position: relative;
-	width: 65%;
-	align-items: center;
-	justify-content: space-between;
-	padding: 10px 15px;
-	border-radius: 6px;
-	background:#2B2B2B;
+.playlist-page .spotify-btn {
+  position: absolute;
+  left: 35%;
+  bottom: 35px;
 }
 
-.playlist-page .playlist-right::before{
-	content: "";
-	position: absolute;
-	top: 39%;
-	left: -6.5%;
-	width: 15px;
-	height: 15px;
-	border-radius: 100%;
-	background: #fff;
+.playlist-page .dis-flex {
+  display: flex;
 }
 
-.playlist-page .name-by{
-	width: 85%;
+.playlist-page .about {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 100px;
 }
 
-.playlist-page .playlist-left{
-	width: 25%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+.playlist-page .about h2 {
+  margin-bottom: 30px;
+  font-weight: 600;
 }
 
-.playlist-page .playlist-left h5{
-	font-size: 20px;
-	color: #D659B1;
+.playlist-page .about-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #2b2b2b;
+  border-radius: 15px;
+  padding: 25px 30px;
+  margin-bottom: 70px;
 }
 
-.playlist-page .playlist-left p{
-	text-align: right;
-	width: 63%;
+.playlist-page .about-box {
+  text-align: center;
+  flex: 0 0 25%;
 }
 
-.playlist-page .playlist-left p span{
-	font-size: 35px;
+.playlist-page .about-box2 {
+  text-align: center;
+  flex: 0 0 50%;
 }
 
-.playlist-page .name-by p span{
-	margin: 0 10px;
-	color: #898989;
+.playlist-page .about-container p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 0;
+  margin: 20px 0 15px;
 }
 
-.playlist-page .about{
-	width:80%;
-	margin: 0 auto;
-	padding-top: 100px;
+.playlist-page .about-container h1 {
+  font-size: 48px;
+  line-height: 100%;
+  font-weight: 600;
 }
 
-.playlist-page .about h2{
-	margin-bottom: 30px;
-	font-weight: 600;
+.playlist-page .about iframe {
+  border-radius: 15px;
 }
 
-.playlist-page .about-container{
-	display: flex;
-	align-items: center;
-	width: 100%;
-	background:#2B2B2B;
-	border-radius: 15px;
-	padding: 25px 30px;
-	margin-bottom: 70px;
+/* =========================================================
+   Playlist track rows (stable, current markup)
+   ========================================================= */
+.playlist-page .main-playlist {
+  width: 80%;
+  margin: 0 auto 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.playlist-page .about-box{
-	text-align: center;
-	flex: 0 0 25%;
+.playlist-page .main-playlist p {
+  font-size: 20px;
+  font-weight: 600;
 }
 
-.playlist-page .about-box2{
-	text-align: center;
-	flex: 0 0 50%;
+/* left label */
+.playlist-page .playlist-left {
+  flex: 0 0 25%;
+  min-width: 220px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.playlist-page .about-container p{
-	font-size: 20px;
-	font-weight: 600;
-	line-height: 0;
-	margin: 20px 0 15px;
+.playlist-page .playlist-left p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: right;
 }
 
-.playlist-page .about-container h1{
-	font-size: 48px;
-	line-height: 100%;
-	font-weight: 600;
+.playlist-page .playlist-left p span {
+  font-size: 28px;
+  font-weight: 700;
 }
 
-.playlist-page .about iframe{
-	border-radius: 15px;
+/* right box */
+.playlist-page .playlist-right {
+  position: relative;
+  width: 65%;
+  background: #2b2b2b;
+  border-radius: 12px;
+  padding: 14px 18px;
+
+  display: grid;
+  grid-template-columns: 56px 1fr 70px;
+  align-items: center;
+  column-gap: 16px;
+}
+
+/* dot on timeline */
+.playlist-page .playlist-right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -6.5%;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background: #fff;
+}
+
+.playlist-page .track-no {
+  font-size: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.playlist-page .track-meta {
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.playlist-page .track-title {
+  font-size: 18px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.playlist-page .track-by {
+  color: #888;
+  font-weight: 500;
+  flex: 0 0 auto;
+}
+
+.playlist-page .track-artist {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ddd;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.playlist-page .track-dur {
+  justify-self: end;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0.95;
 }

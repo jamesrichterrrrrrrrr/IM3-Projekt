@@ -2,10 +2,9 @@ $(function () {
   const $carousels = $(".owl-carousel");
   if ($carousels.length === 0) return;
 
-  // 1) Init OwlCarousel (no loop, fixed spacing)
   $carousels.owlCarousel({
-    loop: false,     // start/end (chronological makes sense)
-    rewind: false,   // don't jump back to start
+    loop: false,
+    rewind: false,
     nav: true,
     dots: false,
     autoplay: false,
@@ -15,23 +14,21 @@ $(function () {
     pullDrag: true,
 
     responsive: {
-      0:    { items: 1.4, margin: 8 },
-      600:  { items: 2,   margin: 12 },
+      0: { items: 1.4, margin: 8 },
+      600: { items: 2, margin: 12 },
       1000: { items: 3.5, margin: 16 }
     }
   });
 
-  // 2) Trackpad two-finger swipe (wheel gesture) -> exactly ONE prev/next per gesture
-  //    Approach: accumulate wheel deltas + debounce (gesture ends -> one move)
-  const SCROLL_THRESHOLD = 35;   // higher = less sensitive
-  const GESTURE_END_MS = 120;    // debounce window
+  const SCROLL_THRESHOLD = 35;
+  const GESTURE_END_MS = 120;
 
   $carousels.each(function () {
     const $carousel = $(this);
 
-    let acc = 0;         // accumulated horizontal intent
-    let timer = null;    // debounce timer
-    let locked = false;  // prevents double triggers inside one gesture
+    let acc = 0;
+    let timer = null;
+    let locked = false;
 
     $carousel.on("wheel", ".owl-stage", function (e) {
       const oe = e.originalEvent;
@@ -43,20 +40,13 @@ $(function () {
       const absX = Math.abs(dx);
       const absY = Math.abs(dy);
 
-      // If user is mostly scrolling vertically, let the page scroll normally
       if (absY > absX) return;
 
-      // We're handling horizontal swipe -> prevent page from scrolling
       e.preventDefault();
 
-      // Some systems report horizontal trackpad gesture via deltaY too.
-      // Prefer deltaX if present; fall back to deltaY.
       const delta = absX >= 1 ? dx : dy;
-
-      // Accumulate intent
       acc += delta;
 
-      // Debounce: when gesture stops, do ONE move
       if (timer) clearTimeout(timer);
       timer = setTimeout(function () {
         if (locked) return;
@@ -69,10 +59,7 @@ $(function () {
           locked = true;
         }
 
-        // Reset for next gesture
         acc = 0;
-
-        // Unlock shortly after movement so next gesture can act
         setTimeout(() => { locked = false; }, 200);
       }, GESTURE_END_MS);
     });

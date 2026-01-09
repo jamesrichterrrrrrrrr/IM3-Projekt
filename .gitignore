@@ -1,4 +1,4 @@
-# Ignore real database credentials
+# Ignore database credentials
 api/db.php
 
 # Optional: OS / editor noise
